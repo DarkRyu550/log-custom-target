@@ -27,6 +27,7 @@ fn target_has_atomic_cas(target: &str) -> bool {
         | "msp430-none-elf"
         | "riscv32i-unknown-none-elf"
         | "riscv32imc-unknown-none-elf" => false,
+        neorv if neorv.starts_with("riscv32im-neorv32") => false,
         _ => true,
     }
 }
